@@ -1,0 +1,12 @@
+version: "3.4"
+services:
+  homebridge:
+    image: homeassistant/home-assistant
+    restart: always
+    network_mode: host
+    volumes:
+      - ./volumes/hassio:/hassio
+    environment:
+      - TZ=${TZ}
+      - PGID=${PGID}
+      - PUID=${PUID}
