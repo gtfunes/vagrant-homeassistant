@@ -18,3 +18,8 @@ desktop.ini
 .env
 .vagrant
 *.log
+
+####
+# Configuration files
+
+config/
