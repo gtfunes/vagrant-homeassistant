@@ -4,6 +4,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", run: "once", path: "provision.sh"
 
   config.vm.synced_folder ".", "/vagrant", disabled: true
+  config.vm.synced_folder "./config", "/usr/share/hassio/homeassistant", disabled: false
 
   config.vm.provider :virtualbox do |vb|
     vb.memory = 1536
